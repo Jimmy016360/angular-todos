@@ -26,4 +26,14 @@ describe('TitleComponent', () => {
   it(`should be defined function 'getTitle'`, () => {
     expect(component.getTitle).toBeTruthy();
   });
+
+  it(`should use getTitle function in H1`, () => {
+    component.getTitle = function(){
+      return 'fake';
+    };
+    fixture.detectChanges();
+
+    const element = fixture.debugElement.query(By.css('h1')).nativeElement;
+    expect(element.textContent).toBe('fake');
+  });
 });
