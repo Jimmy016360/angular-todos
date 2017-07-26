@@ -22,7 +22,7 @@ describe('TitleComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-  
+
   it(`should be defined function 'getTitle'`, () => {
     expect(component.getTitle).toBeTruthy();
   });
